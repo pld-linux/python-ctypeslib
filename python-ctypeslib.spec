@@ -1,10 +1,11 @@
+%define	svnrev	r89065
+%define	snap	20100119
+%define	rel	1
 Summary:	ctypeslib - useful additions to the ctypes FFI library
 Summary(pl.UTF-8):	ctypeslib - przydatne dodatki do biblioteki FFI ctypes
 Name:		python-ctypeslib
 Version:	0.5.6
-%define	svnrev	r89065
-%define	snap	20100119
-Release:	0.%{snap}.1
+Release:	0.%{snap}.5{rel}
 License:	MIT
 Group:		Libraries/Python
 # svn co http://svn.python.org/projects/ctypes/trunk/ctypeslib
@@ -14,12 +15,20 @@ URL:		https://pypi.python.org/pypi/ctypeslib
 BuildRequires:	python-modules >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	python-modules >= 1:2.5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 ctypeslib - useful additions to the ctypes FFI library.
+
+ctypeslib contains these packages:
+- ctypeslib.codegen - a code generator
+- ctypeslib.contrib - various contributed modules
+- ctypeslib.util - assorted small helper functions
+- ctypeslib.test - unittests
 
 %description -l pl.UTF-8
 ctypeslib - przydatne dodatki do biblioteki FFI ctypes.
@@ -32,7 +41,6 @@ ctypeslib - przydatne dodatki do biblioteki FFI ctypes.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__python} setup.py install \
 	--skip-build \
 	--optimize=2 \

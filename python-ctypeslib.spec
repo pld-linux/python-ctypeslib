@@ -1,6 +1,6 @@
 %define	svnrev	r89065
 %define	snap	20100119
-%define	rel	2
+%define	rel	3
 Summary:	ctypeslib - useful additions to the ctypes FFI library
 Summary(pl.UTF-8):	ctypeslib - przydatne dodatki do biblioteki FFI ctypes
 Name:		python-ctypeslib

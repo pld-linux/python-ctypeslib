@@ -16,7 +16,7 @@ Patch0:		%{name}-cv.patch
 URL:		https://pypi.python.org/pypi/ctypeslib
 BuildRequires:	python-modules >= 1:2.5
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	gccxml

@@ -44,7 +44,7 @@ ctypeslib zawiera następujące pakiety:
 
 %prep
 %setup -q -n ctypeslib
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %py_build
